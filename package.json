@@ -1,9 +1,11 @@
 {
   "name": "@ceski23/eslint-config",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "semantic-release": "semantic-release"
+  },
   "author": "Cezary Bober",
   "license": "MIT",
   "peerDependencies": {
@@ -16,5 +18,15 @@
   },
   "dependencies": {
     "@typescript-eslint/parser": "^5.52.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ceski23/eslint-config.git"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "devDependencies": {
+    "semantic-release": "^20.1.0"
   }
 }
