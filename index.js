@@ -54,6 +54,7 @@ module.exports = {
     "@typescript-eslint/prefer-nullish-coalescing": "warn",
     "@typescript-eslint/prefer-optional-chain": "warn",
     "@typescript-eslint/prefer-reduce-type-parameter": "warn",
+    "@typescript-eslint/no-unsafe-return": "warn",
     "react-hooks/exhaustive-deps": "warn",
     "react/button-has-type": "warn",
     "react/jsx-max-props-per-line": ["warn", { maximum: 1 }],
