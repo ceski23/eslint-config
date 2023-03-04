@@ -7,6 +7,9 @@
     "semantic-release": "semantic-release",
     "prepare": "husky install"
   },
+  "files": [
+    "index.js"
+  ],
   "author": "Cezary Bober",
   "license": "MIT",
   "peerDependencies": {
