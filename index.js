@@ -18,6 +18,30 @@ module.exports = {
     "object-shorthand": "warn",
     "arrow-body-style": "warn",
     "arrow-parens": ["warn", "as-needed"],
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "array-bracket-spacing": [
+      "error",
+      "never"
+    ],
+    "comma-spacing": [
+      "error",
+      {
+        "before": false,
+        "after": true
+      }
+    ],
+    "keyword-spacing": [
+      "error",
+      {
+        "before": true
+      }
+    ],
+    "space-infix-ops": [
+      "error"
+    ],
     "import/order": [
       "warn",
       {
