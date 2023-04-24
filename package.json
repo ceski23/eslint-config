@@ -28,7 +28,8 @@
     "url": "https://github.com/ceski23/eslint-config.git"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.4",
