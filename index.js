@@ -12,8 +12,13 @@ module.exports = {
     sourceType: "module",
   },
   plugins: ["import", "prefer-arrow-functions"],
+  reportUnusedDisableDirectives: true,
   rules: {
     eqeqeq: ["error"],
+    "indent": [
+      "warn",
+      4
+    ],
     "prefer-template": "warn",
     "object-shorthand": "warn",
     "arrow-body-style": "warn",
@@ -49,6 +54,12 @@ module.exports = {
         "newlines-between": "ignore",
         alphabetize: { order: "asc" },
       },
+    ],
+    "no-multiple-empty-lines": [
+      "warn",
+      {
+        "max": 1
+      }
     ],
     "import/no-useless-path-segments": "warn",
     "import/no-relative-parent-imports": "warn",
@@ -100,7 +111,6 @@ module.exports = {
       },
     ],
     "react/jsx-one-expression-per-line": "warn",
-    "react/jsx-no-leaked-render": "warn",
     "react/self-closing-comp": "warn",
     "react/function-component-definition": [
       "warn",
