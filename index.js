@@ -44,6 +44,7 @@ module.exports = {
         "before": true
       }
     ],
+    "no-console": "warn",
     "space-infix-ops": [
       "error"
     ],
