@@ -14,6 +14,8 @@ module.exports = {
   plugins: ["import", "prefer-arrow-functions"],
   reportUnusedDisableDirectives: true,
   rules: {
+    quotes: ["warn", "single"],
+    "jsx-quotes": ["warn", "prefer-double"],
     eqeqeq: ["error"],
     "indent": [
       "warn",
