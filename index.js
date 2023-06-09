@@ -13,6 +13,9 @@ module.exports = {
   },
   plugins: ["import", "prefer-arrow-functions"],
   reportUnusedDisableDirectives: true,
+  settings: {
+    "import/internal-regex": "^(features|lib)/"
+  },
   rules: {
     quotes: ["warn", "single"],
     "jsx-quotes": ["warn", "prefer-double"],
@@ -53,9 +56,21 @@ module.exports = {
     "import/order": [
       "warn",
       {
-        groups: ["builtin", "external", "parent", "sibling", "index"],
+        groups: [
+          "external",
+          "internal",
+          [
+            "builtin",
+            "parent",
+            "sibling",
+            "index"
+          ],
+        ],
         "newlines-between": "ignore",
-        alphabetize: { order: "asc" },
+        alphabetize: {
+          order: "asc",
+          caseInsensitive: true
+        },
       },
     ],
     "no-multiple-empty-lines": [
@@ -64,6 +79,7 @@ module.exports = {
         "max": 1
       }
     ],
+    "import/extensions": ["warn", "never"],
     "import/no-useless-path-segments": "warn",
     "import/no-relative-parent-imports": "warn",
     "import/newline-after-import": "warn",
