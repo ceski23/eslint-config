@@ -14,7 +14,10 @@ module.exports = {
   plugins: ["import", "prefer-arrow-functions"],
   reportUnusedDisableDirectives: true,
   settings: {
-    "import/internal-regex": "^(features|lib)/"
+    "import/internal-regex": "^(features|lib)/",
+    "react": {
+      "version": "detect"
+    }
   },
   rules: {
     quotes: ["warn", "single"],
