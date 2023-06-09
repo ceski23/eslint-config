@@ -141,5 +141,9 @@ module.exports = {
         unnamedComponents: "function-expression",
       },
     ],
+    "react/jsx-curly-brace-presence": ["warn", {
+      "props": "never",
+      propElementValues: "always"
+    }]
   },
 };
