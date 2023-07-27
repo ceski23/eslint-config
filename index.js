@@ -11,7 +11,7 @@ module.exports = {
     project: "./tsconfig.json",
     sourceType: "module",
   },
-  plugins: ["import", "prefer-arrow-functions"],
+  plugins: ["import", "prefer-arrow-functions", "newline-destructuring"],
   reportUnusedDisableDirectives: true,
   settings: {
     "import/internal-regex": "^(features|lib)/",
@@ -144,6 +144,13 @@ module.exports = {
     "react/jsx-curly-brace-presence": ["warn", {
       "props": "never",
       propElementValues: "always"
-    }]
+    }],
+    "newline-destructuring/newline": [
+      "warn",
+      {
+          "items": 5,
+          "maxLength": 150
+      }
+    ],
   },
 };
