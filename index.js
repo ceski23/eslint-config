@@ -76,6 +76,7 @@ module.exports = {
         },
       },
     ],
+    "no-trailing-spaces": "warn",
     "no-multiple-empty-lines": [
       "warn",
       {
