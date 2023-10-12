@@ -3,6 +3,7 @@
   "version": "1.4.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "semantic-release": "semantic-release",
     "prepare": "husky install"
@@ -13,17 +14,7 @@
   "author": "Cezary Bober",
   "license": "MIT",
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.52.0",
-    "eslint": "^8.27.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-jsx-a11y": "^6.7.1",
-    "eslint-plugin-newline-destructuring": "^1.2.1",
-    "eslint-plugin-prefer-arrow-functions": "^3.1.4",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react": "^7.32.2"
-  },
-  "dependencies": {
-    "@typescript-eslint/parser": "^5.52.0"
+    "eslint": "^8.27.0"
   },
   "repository": {
     "type": "git",
@@ -36,7 +27,17 @@
   "devDependencies": {
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",
+    "@eslint/eslintrc": "^2.1.2",
+    "@eslint/js": "^8.51.0",
     "@semantic-release/git": "^10.0.1",
+    "@types/eslint": "^8.44.4",
+    "@typescript-eslint/eslint-plugin": "^6.7.5",
+    "@typescript-eslint/parser": "^6.7.5",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-newline-destructuring": "^1.2.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "husky": "^8.0.3",
     "semantic-release": "^21.0.1"
   }
