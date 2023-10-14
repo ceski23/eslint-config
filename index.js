@@ -76,13 +76,11 @@ export default [
             // Enforce proper position of the first property in JSX
             'react/jsx-first-prop-new-line': ['warn', 'multiline-multiprop'],
             // Enforce JSX indentation
-            'react/jsx-indent': 'warn',
+            'react/jsx-indent': ['warn', 'tab'],
             // Enforce props indentation in JSX
-            'react/jsx-indent-props': 'warn',
+            'react/jsx-indent-props': ['warn', 'tab'],
             // Disallow missing key props in iterators/collection literals
             'react/jsx-key': 'warn',
-            // Require one JSX element per line
-            'react/jsx-one-expression-per-line': 'warn',
             // Disallow extra closing tags for components without children
             'react/self-closing-comp': 'warn',
             // Disallow unnecessary JSX expressions when literals alone are sufficient or enforce JSX expressions on literals in JSX children or attributes
