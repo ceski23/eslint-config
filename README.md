@@ -1,16 +1,20 @@
 ## Installation
 
-1. Install this package and it's `peerDependencies`:
+1. Install this package:
 ```
-npx install-peerdeps --dev @ceski23/eslint-config
+npm i -D @ceski23/eslint-config
 ```
 
-2. Use this config in your `.eslintrc` file:
-```json
-{
-    "root": true,
-    "extends": [
-        "@ceski23/eslint-config"
-    ]
-}
+2. Use this config in your `eslint.config.js` file:
+```javascript
+import config from '@ceski23/eslint-config'
+
+export default [
+    ...config,
+    {
+        rules: {
+            // your rules
+        }
+    }
+]
 ```
