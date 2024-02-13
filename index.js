@@ -3,7 +3,7 @@ import { fileURLToPath } from 'node:url'
 import js from '@eslint/js'
 import reactJsxRuntime from 'eslint-plugin-react/configs/jsx-runtime.js'
 import { FlatCompat } from '@eslint/eslintrc'
-import typescriptParser from '@typescript-eslint/parser'
+import tseslint from 'typescript-eslint'
 
 const compat = new FlatCompat({
     baseDirectory: path.dirname(fileURLToPath(import.meta.url))
@@ -133,6 +133,8 @@ export default [
                     caseInsensitive: true
                 },
             }],
+            // Ensures that there is no resolvable path back to this module via its dependencies.
+            'import/no-cycle': 'warn',
         }
     },
     ...compat.plugins('newline-destructuring'),
@@ -145,11 +147,10 @@ export default [
             }]
         }
     },
-    // TODO: remove compatibility mode after fixing https://github.com/typescript-eslint/typescript-eslint/issues/7694
-    ...compat.extends('plugin:@typescript-eslint/recommended'),
+    ...tseslint.configs.recommended,
     {
         languageOptions: {
-            parser: typescriptParser,
+            parser: tseslint.parser,
             parserOptions: {
                 project: './tsconfig.json',
                 sourceType: 'module',
@@ -172,6 +173,12 @@ export default [
             '@typescript-eslint/prefer-reduce-type-parameter': 'warn',
             // Disallow returning a value with type any from a function
             '@typescript-eslint/no-unsafe-return': 'warn',
+            // Enforce consistent usage of type imports
+            '@typescript-eslint/consistent-type-imports': ['warn', {
+                prefer: 'type-imports',
+                disallowTypeAnnotations: false,
+                fixStyle: 'inline-type-imports',
+            }],
         }
     }
 ]
